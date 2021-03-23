@@ -10,16 +10,13 @@ import Foundation
 class NetworkLayer<T: Codable>{
     
     class func request(router: Router, completion: @escaping (NetworkReponse<T>) -> ()) {
-        var components = URLComponents()
-        components.scheme = router.scheme   
-        components.host = router.host
-        components.path = router.path
-        components.queryItems = router.parameters
         
-        guard let url = components.url else {
+        guard let url = NetworkHelpers.createUrlFrom(router: router) else {
             completion(.failure(.brokenURL))
             return
         }
+        
+        print(url)
         
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = router.method
@@ -37,15 +34,22 @@ class NetworkLayer<T: Codable>{
                 return
             }
             
-            do {
-                let responseObject = try JSONDecoder().decode(T.self, from: data)
-                DispatchQueue.main.async {
-                    completion(.success(responseObject))
-                }
-            } catch {
-                completion(.failure(.parseError))
+            guard let responseObject: T = NetworkLayer<T>.decodeFrom(data: data) else {
+                completion(.failure(.noData))
+                return
             }
+            
+            completion(.success(responseObject))
         }
         dataTask.resume()
+    }
+    
+    class func decodeFrom(data: Data) -> T? {
+        do {
+            let responseObject = try JSONDecoder().decode(T.self, from: data)
+            return responseObject
+        } catch {
+            return nil
+        }
     }
 }

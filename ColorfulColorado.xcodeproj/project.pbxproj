@@ -22,6 +22,9 @@
 		0B37428C2607496400F85549 /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B37428B2607496400F85549 /* Items.swift */; };
 		0B3742912607497700F85549 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3742902607497700F85549 /* Media.swift */; };
 		0B3742972607554200F85549 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3742962607554200F85549 /* NetworkError.swift */; };
+		0B98F527260A148400E8A1B7 /* ColorfulColoradoNetworkingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B98F526260A148400E8A1B7 /* ColorfulColoradoNetworkingTest.swift */; };
+		0B98F52F260A20E800E8A1B7 /* NetworkHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B98F52E260A20E700E8A1B7 /* NetworkHelpers.swift */; };
+		0B98F534260A33BA00E8A1B7 /* flickrDummyJson.json in Resources */ = {isa = PBXBuildFile; fileRef = 0B98F533260A33BA00E8A1B7 /* flickrDummyJson.json */; };
 		0BA7F733260913FD00911CD4 /* NetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA7F732260913FD00911CD4 /* NetworkResponse.swift */; };
 		0BA7F74A2609265500911CD4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA7F7492609265500911CD4 /* Constants.swift */; };
 /* End PBXBuildFile section */
@@ -58,13 +61,16 @@
 		0B3742492607355900F85549 /* ColorfulColoradoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ColorfulColoradoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B37424D2607355900F85549 /* ColorfulColoradoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorfulColoradoUITests.swift; sourceTree = "<group>"; };
 		0B37424F2607355900F85549 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0B37427226073F2200F85549 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Router.swift; path = ../../../../Router.swift; sourceTree = "<group>"; };
+		0B37427226073F2200F85549 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		0B37427C260743D000F85549 /* Networking+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Networking+Constants.swift"; sourceTree = "<group>"; };
 		0B3742812607463C00F85549 /* NetworkLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayer.swift; sourceTree = "<group>"; };
 		0B3742862607494A00F85549 /* RecentUploads.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentUploads.swift; sourceTree = "<group>"; };
 		0B37428B2607496400F85549 /* Items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Items.swift; sourceTree = "<group>"; };
 		0B3742902607497700F85549 /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
 		0B3742962607554200F85549 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		0B98F526260A148400E8A1B7 /* ColorfulColoradoNetworkingTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorfulColoradoNetworkingTest.swift; sourceTree = "<group>"; };
+		0B98F52E260A20E700E8A1B7 /* NetworkHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelpers.swift; sourceTree = "<group>"; };
+		0B98F533260A33BA00E8A1B7 /* flickrDummyJson.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = flickrDummyJson.json; sourceTree = "<group>"; };
 		0BA7F732260913FD00911CD4 /* NetworkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResponse.swift; sourceTree = "<group>"; };
 		0BA7F7492609265500911CD4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -129,6 +135,8 @@
 			isa = PBXGroup;
 			children = (
 				0B3742422607355900F85549 /* ColorfulColoradoTests.swift */,
+				0B98F526260A148400E8A1B7 /* ColorfulColoradoNetworkingTest.swift */,
+				0B98F533260A33BA00E8A1B7 /* flickrDummyJson.json */,
 				0B3742442607355900F85549 /* Info.plist */,
 			);
 			path = ColorfulColoradoTests;
@@ -164,6 +172,7 @@
 				0B3742812607463C00F85549 /* NetworkLayer.swift */,
 				0B3742962607554200F85549 /* NetworkError.swift */,
 				0BA7F732260913FD00911CD4 /* NetworkResponse.swift */,
+				0B98F52E260A20E700E8A1B7 /* NetworkHelpers.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -300,6 +309,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B98F534260A33BA00E8A1B7 /* flickrDummyJson.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +332,7 @@
 				0B37427326073F2200F85549 /* Router.swift in Sources */,
 				0B3742302607355700F85549 /* ViewController.swift in Sources */,
 				0BA7F733260913FD00911CD4 /* NetworkResponse.swift in Sources */,
+				0B98F52F260A20E800E8A1B7 /* NetworkHelpers.swift in Sources */,
 				0B37427D260743D000F85549 /* Networking+Constants.swift in Sources */,
 				0B37422C2607355700F85549 /* AppDelegate.swift in Sources */,
 				0B37428C2607496400F85549 /* Items.swift in Sources */,
@@ -336,6 +347,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B98F527260A148400E8A1B7 /* ColorfulColoradoNetworkingTest.swift in Sources */,
 				0B3742432607355900F85549 /* ColorfulColoradoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
