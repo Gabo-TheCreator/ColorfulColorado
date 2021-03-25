@@ -13,6 +13,10 @@ struct Constants {
             static let imageWithTitleCollectionViewCell = "imageWithTitleCollectionViewCell"
             static let tryAgainCollectionViewCell = "ErrorCollectionViewCell"
         }
+        
+        struct Images {
+            static let placeholder = "placeholder"
+        }
     }
     
     struct Messages {

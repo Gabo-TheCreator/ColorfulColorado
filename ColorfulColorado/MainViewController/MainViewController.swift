@@ -113,8 +113,9 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.MainViewController.Identifiers.imageWithTitleCollectionViewCell, for: indexPath) as! ImageWithTitleCollectionViewCell
         self.showingCell = .ImageWithTitle
         cell.title.text = recentUploads.items[indexPath.row].title
-        if let url = URL(string: recentUploads.items[indexPath.row].media.url) {
-            cell.image.sd_setImage(with: url, completed: nil)
+        if let url = URL(string: recentUploads.items[indexPath.row].media.url),
+           let placeholder = UIImage(named: Constants.MainViewController.Images.placeholder){
+            cell.image.sd_setImage(with: url, placeholderImage: placeholder, options: .progressiveLoad, completed: nil)
         }
         return cell
     }
