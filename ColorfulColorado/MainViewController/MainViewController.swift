@@ -17,16 +17,21 @@ class MainViewController: UIViewController {
     
     private var recentUploads: RecentUploads? {
         didSet {
-            DispatchQueue.main.async {
-                self.mainCollectionView.reloadData()
-            }
+            self.safeReloadData()
+        }
+    }
+    
+    private var errorCellMessage = Constants.Messages.Errors.ops {
+        didSet {
+            self.safeReloadData()
         }
     }
     
     private var isFirstLoad = true
     private let sectionInsets = UIEdgeInsets(top: 10.0, left: 10.0, bottom: 10.0, right: 10.0)
     private let itemsPerRow: CGFloat = 3
-    private var errorCellMessage = String(format: Constants.Messages.Errors.error, "")
+    private var refresher = UIRefreshControl()
+    
     private var showingCell: MainViewCollectionViewCells?
     
     //MARK: Life Cycle
@@ -47,7 +52,7 @@ class MainViewController: UIViewController {
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         // Reload mainCollectionView in order to keep the 3 row layout when the devices rotates
-        self.mainCollectionView.reloadData()
+        self.safeReloadData()
     }
     
     // MARK: Functions
@@ -55,25 +60,34 @@ class MainViewController: UIViewController {
     private func setUpCollectionView() {
         self.mainCollectionView.delegate = self
         self.mainCollectionView.dataSource = self
+        
+        self.refresher = UIRefreshControl()
+        self.refresher.addTarget(self, action: #selector(reloadDataUsingRefresher), for: .valueChanged)
+        self.mainCollectionView.addSubview(refresher)
     }
     
-    private func retriveDataForColoradoImages() {
+    private func retriveDataForColoradoImages(completion: (() -> Void)? = nil) {
         NetworkLayer<RecentUploads>.request(router: .fetchColoradoImages) { (networkResponse) in
             switch networkResponse {
             case .success(let data):
                 self.recentUploads = data
+                if let completion = completion{
+                    completion()
+                }
             case .failure(let error):
                 switch error {
                 case .brokenURL:
                     self.errorCellMessage = Constants.Messages.Errors.brokenUrl
-                case .error(let thisError):
-                    self.errorCellMessage = String(format: Constants.Messages.Errors.error, thisError)
+                case .error(_):
+                    self.errorCellMessage = String(format: Constants.Messages.Errors.error, error.localizedDescription)
                 case .parseError:
                     self.errorCellMessage = Constants.Messages.Errors.parseError
                 case .noData:
                     self.errorCellMessage = Constants.Messages.Errors.noData
                 }
-                print(error.localizedDescription)
+                if let completion = completion{
+                    completion()
+                }
                 self.simpleAlert(title: Constants.Messages.Errors.ops,
                                  message: error.localizedDescription,
                                  buttonTitle: Constants.Button.ok) { (alert) in
@@ -92,6 +106,21 @@ class MainViewController: UIViewController {
                 }
             }))
             self.present(alert, animated: true, completion: nil)
+        }
+    }
+    
+    private func safeReloadData() {
+        DispatchQueue.main.async {
+            self.mainCollectionView.reloadData()
+        }
+    }
+    
+    @objc private func reloadDataUsingRefresher() {
+        self.refresher.beginRefreshing()
+        retriveDataForColoradoImages {
+            DispatchQueue.main.async {
+                self.refresher.endRefreshing()
+            }
         }
     }
 }
@@ -134,7 +163,7 @@ extension MainViewController: UICollectionViewDelegateFlowLayout {
             let widthPerItem = availableWidth / itemsPerRow
             return CGSize(width: widthPerItem, height: widthPerItem * 1.8)
         default:
-            return CGSize(width: self.mainCollectionView.frame.width, height: self.mainCollectionView.frame.height)
+            return CGSize(width: self.mainCollectionView.frame.width, height: self.mainCollectionView.frame.height * 0.5)
         }
         
     }

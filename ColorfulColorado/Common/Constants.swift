@@ -21,7 +21,7 @@ struct Constants {
     
     struct Messages {
         struct Errors {
-            static let ops = "Ops..."
+            static let ops = "Ops... "
             static let brokenUrl = ops + "The Url seems to be invalid."
             static let error = ops + "Error: %@"
             static let parseError = ops + "Could not read data."

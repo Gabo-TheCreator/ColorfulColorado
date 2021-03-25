@@ -24,7 +24,8 @@ extension Constants {
             static let scheme = "https"
             static let host = "api.flickr.com"
             static let path = "/services/feeds/photos_public.gne"
-            static let parameters: [URLQueryItem] = [URLQueryItem(name: "format", value: "json")]
+            static let parameters: [URLQueryItem] = [URLQueryItem(name: "format", value: "json"),
+                                                     URLQueryItem(name: "nojsoncallback", value: "1")]
         }
     }
 }
