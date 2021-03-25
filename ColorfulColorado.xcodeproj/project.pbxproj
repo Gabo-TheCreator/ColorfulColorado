@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		0B37422C2607355700F85549 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B37422B2607355700F85549 /* AppDelegate.swift */; };
 		0B37422E2607355700F85549 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B37422D2607355700F85549 /* SceneDelegate.swift */; };
-		0B3742302607355700F85549 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B37422F2607355700F85549 /* ViewController.swift */; };
+		0B3742302607355700F85549 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B37422F2607355700F85549 /* MainViewController.swift */; };
 		0B3742332607355700F85549 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B3742312607355700F85549 /* Main.storyboard */; };
 		0B3742352607355800F85549 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B3742342607355800F85549 /* Assets.xcassets */; };
 		0B3742382607355800F85549 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B3742362607355800F85549 /* LaunchScreen.storyboard */; };
@@ -27,6 +27,11 @@
 		0B98F534260A33BA00E8A1B7 /* flickrDummyJson.json in Resources */ = {isa = PBXBuildFile; fileRef = 0B98F533260A33BA00E8A1B7 /* flickrDummyJson.json */; };
 		0BA7F733260913FD00911CD4 /* NetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA7F732260913FD00911CD4 /* NetworkResponse.swift */; };
 		0BA7F74A2609265500911CD4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA7F7492609265500911CD4 /* Constants.swift */; };
+		0BC1A94A260B6C2D009F6E4D /* ImageWithTitleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC1A949260B6C2D009F6E4D /* ImageWithTitleCollectionViewCell.swift */; };
+		0BC1A969260B853B009F6E4D /* ErrorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC1A968260B853B009F6E4D /* ErrorCollectionViewCell.swift */; };
+		1BD5BECA6D2169F3E13FA775 /* Pods_ColorfulColorado.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6617D0FEEC30CF69A5EEF899 /* Pods_ColorfulColorado.framework */; };
+		21F6369B0A24D09FB568CF5D /* Pods_ColorfulColorado_ColorfulColoradoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8792041A24E3C7AC529B96A /* Pods_ColorfulColorado_ColorfulColoradoUITests.framework */; };
+		3CA44A8749DACA8C6C973CA9 /* Pods_ColorfulColoradoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9AA49A189BDB9634FBF1D0C /* Pods_ColorfulColoradoTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,10 +52,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02FA4CF30066372DA0CC66E5 /* Pods-ColorfulColoradoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ColorfulColoradoTests.debug.xcconfig"; path = "Target Support Files/Pods-ColorfulColoradoTests/Pods-ColorfulColoradoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		0B3742282607355700F85549 /* ColorfulColorado.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorfulColorado.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B37422B2607355700F85549 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0B37422D2607355700F85549 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0B37422F2607355700F85549 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0B37422F2607355700F85549 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		0B3742322607355700F85549 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0B3742342607355800F85549 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0B3742372607355800F85549 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -73,6 +79,16 @@
 		0B98F533260A33BA00E8A1B7 /* flickrDummyJson.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = flickrDummyJson.json; sourceTree = "<group>"; };
 		0BA7F732260913FD00911CD4 /* NetworkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResponse.swift; sourceTree = "<group>"; };
 		0BA7F7492609265500911CD4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		0BC1A949260B6C2D009F6E4D /* ImageWithTitleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageWithTitleCollectionViewCell.swift; sourceTree = "<group>"; };
+		0BC1A968260B853B009F6E4D /* ErrorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorCollectionViewCell.swift; sourceTree = "<group>"; };
+		19FE6F98FE4CA1A7227F30BB /* Pods-ColorfulColorado.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ColorfulColorado.debug.xcconfig"; path = "Target Support Files/Pods-ColorfulColorado/Pods-ColorfulColorado.debug.xcconfig"; sourceTree = "<group>"; };
+		20EA0C694F6E9C9502A40832 /* Pods-ColorfulColorado-ColorfulColoradoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ColorfulColorado-ColorfulColoradoUITests.debug.xcconfig"; path = "Target Support Files/Pods-ColorfulColorado-ColorfulColoradoUITests/Pods-ColorfulColorado-ColorfulColoradoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		53221EB6A5215180D4E46168 /* Pods-ColorfulColoradoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ColorfulColoradoTests.release.xcconfig"; path = "Target Support Files/Pods-ColorfulColoradoTests/Pods-ColorfulColoradoTests.release.xcconfig"; sourceTree = "<group>"; };
+		6617D0FEEC30CF69A5EEF899 /* Pods_ColorfulColorado.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ColorfulColorado.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8792041A24E3C7AC529B96A /* Pods_ColorfulColorado_ColorfulColoradoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ColorfulColorado_ColorfulColoradoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE498855DAA4706E0DC86CFC /* Pods-ColorfulColorado.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ColorfulColorado.release.xcconfig"; path = "Target Support Files/Pods-ColorfulColorado/Pods-ColorfulColorado.release.xcconfig"; sourceTree = "<group>"; };
+		F9AA49A189BDB9634FBF1D0C /* Pods_ColorfulColoradoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ColorfulColoradoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFDEF8D3C3F6968E5BC6FCCA /* Pods-ColorfulColorado-ColorfulColoradoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ColorfulColorado-ColorfulColoradoUITests.release.xcconfig"; path = "Target Support Files/Pods-ColorfulColorado-ColorfulColoradoUITests/Pods-ColorfulColorado-ColorfulColoradoUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BD5BECA6D2169F3E13FA775 /* Pods_ColorfulColorado.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CA44A8749DACA8C6C973CA9 /* Pods_ColorfulColoradoTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21F6369B0A24D09FB568CF5D /* Pods_ColorfulColorado_ColorfulColoradoUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,6 +126,8 @@
 				0B3742412607355900F85549 /* ColorfulColoradoTests */,
 				0B37424C2607355900F85549 /* ColorfulColoradoUITests */,
 				0B3742292607355700F85549 /* Products */,
+				3F3724336BA4A77709572CB5 /* Pods */,
+				D71D8AC2B6A695FF018C1B84 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -190,10 +211,44 @@
 		0BA7F73A2609258900911CD4 /* MainViewController */ = {
 			isa = PBXGroup;
 			children = (
-				0B37422F2607355700F85549 /* ViewController.swift */,
+				0B37422F2607355700F85549 /* MainViewController.swift */,
 				0B3742312607355700F85549 /* Main.storyboard */,
+				0BC1A94E260B6C3C009F6E4D /* CollectionViewCell */,
 			);
 			path = MainViewController;
+			sourceTree = "<group>";
+		};
+		0BC1A94E260B6C3C009F6E4D /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				0BC1A949260B6C2D009F6E4D /* ImageWithTitleCollectionViewCell.swift */,
+				0BC1A968260B853B009F6E4D /* ErrorCollectionViewCell.swift */,
+			);
+			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
+		3F3724336BA4A77709572CB5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				19FE6F98FE4CA1A7227F30BB /* Pods-ColorfulColorado.debug.xcconfig */,
+				DE498855DAA4706E0DC86CFC /* Pods-ColorfulColorado.release.xcconfig */,
+				20EA0C694F6E9C9502A40832 /* Pods-ColorfulColorado-ColorfulColoradoUITests.debug.xcconfig */,
+				FFDEF8D3C3F6968E5BC6FCCA /* Pods-ColorfulColorado-ColorfulColoradoUITests.release.xcconfig */,
+				02FA4CF30066372DA0CC66E5 /* Pods-ColorfulColoradoTests.debug.xcconfig */,
+				53221EB6A5215180D4E46168 /* Pods-ColorfulColoradoTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D71D8AC2B6A695FF018C1B84 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6617D0FEEC30CF69A5EEF899 /* Pods_ColorfulColorado.framework */,
+				A8792041A24E3C7AC529B96A /* Pods_ColorfulColorado_ColorfulColoradoUITests.framework */,
+				F9AA49A189BDB9634FBF1D0C /* Pods_ColorfulColoradoTests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,9 +258,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0B3742522607355900F85549 /* Build configuration list for PBXNativeTarget "ColorfulColorado" */;
 			buildPhases = (
+				016FF26563C6B2E431CF3243 /* [CP] Check Pods Manifest.lock */,
 				0B3742242607355700F85549 /* Sources */,
 				0B3742252607355700F85549 /* Frameworks */,
 				0B3742262607355700F85549 /* Resources */,
+				C038493284FB3B20D328236B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -220,6 +277,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0B3742552607355900F85549 /* Build configuration list for PBXNativeTarget "ColorfulColoradoTests" */;
 			buildPhases = (
+				254397C218E6346D564A5485 /* [CP] Check Pods Manifest.lock */,
 				0B37423A2607355900F85549 /* Sources */,
 				0B37423B2607355900F85549 /* Frameworks */,
 				0B37423C2607355900F85549 /* Resources */,
@@ -238,9 +296,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0B3742582607355900F85549 /* Build configuration list for PBXNativeTarget "ColorfulColoradoUITests" */;
 			buildPhases = (
+				ECCEEFCAA73D041FC1F5B81E /* [CP] Check Pods Manifest.lock */,
 				0B3742452607355900F85549 /* Sources */,
 				0B3742462607355900F85549 /* Frameworks */,
 				0B3742472607355900F85549 /* Resources */,
+				ADAF5429A194A085A7BC5A24 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -322,15 +382,119 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		016FF26563C6B2E431CF3243 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ColorfulColorado-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		254397C218E6346D564A5485 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ColorfulColoradoTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ADAF5429A194A085A7BC5A24 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ColorfulColorado-ColorfulColoradoUITests/Pods-ColorfulColorado-ColorfulColoradoUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ColorfulColorado-ColorfulColoradoUITests/Pods-ColorfulColorado-ColorfulColoradoUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ColorfulColorado-ColorfulColoradoUITests/Pods-ColorfulColorado-ColorfulColoradoUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C038493284FB3B20D328236B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ColorfulColorado/Pods-ColorfulColorado-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ColorfulColorado/Pods-ColorfulColorado-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ColorfulColorado/Pods-ColorfulColorado-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ECCEEFCAA73D041FC1F5B81E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ColorfulColorado-ColorfulColoradoUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0B3742242607355700F85549 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BC1A969260B853B009F6E4D /* ErrorCollectionViewCell.swift in Sources */,
 				0B3742912607497700F85549 /* Media.swift in Sources */,
 				0B3742822607463C00F85549 /* NetworkLayer.swift in Sources */,
 				0B37427326073F2200F85549 /* Router.swift in Sources */,
-				0B3742302607355700F85549 /* ViewController.swift in Sources */,
+				0B3742302607355700F85549 /* MainViewController.swift in Sources */,
 				0BA7F733260913FD00911CD4 /* NetworkResponse.swift in Sources */,
 				0B98F52F260A20E800E8A1B7 /* NetworkHelpers.swift in Sources */,
 				0B37427D260743D000F85549 /* Networking+Constants.swift in Sources */,
@@ -338,6 +502,7 @@
 				0B37428C2607496400F85549 /* Items.swift in Sources */,
 				0B3742972607554200F85549 /* NetworkError.swift in Sources */,
 				0B37422E2607355700F85549 /* SceneDelegate.swift in Sources */,
+				0BC1A94A260B6C2D009F6E4D /* ImageWithTitleCollectionViewCell.swift in Sources */,
 				0B3742872607494A00F85549 /* RecentUploads.swift in Sources */,
 				0BA7F74A2609265500911CD4 /* Constants.swift in Sources */,
 			);
@@ -513,6 +678,7 @@
 		};
 		0B3742532607355900F85549 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 19FE6F98FE4CA1A7227F30BB /* Pods-ColorfulColorado.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -532,6 +698,7 @@
 		};
 		0B3742542607355900F85549 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE498855DAA4706E0DC86CFC /* Pods-ColorfulColorado.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -551,6 +718,7 @@
 		};
 		0B3742562607355900F85549 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02FA4CF30066372DA0CC66E5 /* Pods-ColorfulColoradoTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -573,6 +741,7 @@
 		};
 		0B3742572607355900F85549 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 53221EB6A5215180D4E46168 /* Pods-ColorfulColoradoTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -595,6 +764,7 @@
 		};
 		0B3742592607355900F85549 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 20EA0C694F6E9C9502A40832 /* Pods-ColorfulColorado-ColorfulColoradoUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -615,6 +785,7 @@
 		};
 		0B37425A2607355900F85549 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FFDEF8D3C3F6968E5BC6FCCA /* Pods-ColorfulColorado-ColorfulColoradoUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
